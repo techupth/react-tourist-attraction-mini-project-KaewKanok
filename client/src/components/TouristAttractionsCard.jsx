@@ -20,9 +20,11 @@ function TouristAttractionsCard() {
 
   const handleTagClick = (tag) => {
     if (tag !== "และ") {
-      setSearchContent((currentInput) =>
-        currentInput ? `${currentInput} ${tag}` : tag
-      );
+      if (searchContent) {
+        setSearchContent(`${searchContent} ${tag}`);
+      } else {
+        setSearchContent(tag);
+      }
     }
   };
 
