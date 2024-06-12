@@ -63,7 +63,9 @@ function TouristAttractionsCard() {
               alt=""
             />
             <div className="w-[800px] relative">
-              <h1 className="text-3xl font-bold">{item.title}</h1>
+              <a href={item.url}>
+                <h1 className="text-3xl font-bold">{item.title}</h1>
+              </a>
               <p className="text-slate-500">
                 {item.description.length > 100
                   ? `${item.description.slice(0, 100)}...`
